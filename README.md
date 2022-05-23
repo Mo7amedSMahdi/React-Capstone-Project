@@ -1,9 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# COVID-19 TRACKING PROJECT
+# Air Pollution
 
-The Covid-19 Tracking Project collects information from different
-data sources to provide comprehensive data for the novel coronavirus, SARS-CoV-2. using [Narrativa](https://covid19tracking.narrativa.com/index_en.html)
+Air Pollution API provides current, forecast and historical air pollution data for any coordinates on the globe
+
+Besides basic Air Quality Index, the API returns data about polluting gases, such as Carbon monoxide (CO), Nitrogen monoxide (NO), Nitrogen dioxide (NO2), Ozone (O3), Sulphur dioxide (SO2), Ammonia (NH3), and particulates (PM2.5 and PM10).
+
+Air pollution forecast is available for 5 days with hourly granularity. Historical data is accessible from 27th November 2020.
 
 ## Screen Shots
 
