@@ -1,11 +1,10 @@
 @import url('http://fonts.cdnfonts.com/css/gill-sans');
 
 :root {
-  --clr-white: #ffffff;
+  --clr-white: #fff;
   --clr-dark: #171616;
   --clr-dark-blue: #4369b2;
   --clr-light-blue: #5789e6;
-
   --ff-gill: 'Gill Sans', sans-serif;
 }
 

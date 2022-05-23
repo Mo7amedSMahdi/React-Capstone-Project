@@ -7,8 +7,8 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
-  }, []);
-  return <div>{(data.loading && <p>Loading</p>) || data.list.map((data) => <p key={data.coord.lon}>{data.coord.lon}</p>)}</div>;
+  }, [data.list]);
+  return <div>{(data.loading && <p>Loading</p>) || data.list.map((data) => <p key={data.id}>{data.coord.lon}</p>)}</div>;
 };
 
 export default Home;

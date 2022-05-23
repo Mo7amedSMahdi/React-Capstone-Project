@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { v4 as uuid } from 'uuid';
 import * as actions from '../api';
 
 // const baseURL = 'http://api.openweathermap.org/data/2.5/air_pollution';
@@ -16,7 +17,6 @@ const api =
     next(action);
 
     try {
-      let dataObj = [];
       axios
         .all(
           countries.map(async (country) => {
@@ -26,7 +26,11 @@ const api =
         )
         .then(
           axios.spread((...response) => {
-            dataObj = response.map((r) => r.data);
+            let dataObj = [];
+            dataObj = response.map((r) => {
+              const obj = { ...r.data, id: uuid() };
+              return obj;
+            });
             dispatch({ type: onSuccess, payload: dataObj });
           }),
         );
