@@ -1,1 +1,16 @@
-/* stylesheet */
+.header {
+  background: var(--clr-blue);
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.87rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.nav--buttons {
+  gap: 0;
+}

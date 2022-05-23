@@ -3,7 +3,8 @@
 :root {
   --clr-white: #fff;
   --clr-dark: #171616;
-  --clr-dark-blue: #4369b2;
+  --clr-blue: #4369b2;
+  --clr-dark-blue: #35548c;
   --clr-light-blue: #5789e6;
   --ff-gill: 'Gill Sans', sans-serif;
 }
@@ -59,7 +60,7 @@ body {
   font-weight: 450;
   font-size: 1.125rem;
   line-height: 1.375rem;
-  color: var(--clr-dark);
+  color: var(--clr-white);
   scroll-behavior: smooth;
 }
 
@@ -161,4 +162,8 @@ input[type='reset'] {
 
 .btn-primary {
   color: var(--clr-white);
+}
+
+main {
+  background: var(--clr-light-blue);
 }
