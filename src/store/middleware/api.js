@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as actions from '../api';
-const baseURL = 'https://api.covid19tracking.narrativa.com/api/';
+const baseURL = 'http://api.openweathermap.org/data/2.5/air_pollution';
 
 const api =
   ({ dispatch }) =>
