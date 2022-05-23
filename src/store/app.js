@@ -1,15 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
-import moment from 'moment';
+// import moment from 'moment';
 import { apiCallBegan } from './api';
+import countryList from '../data/coutriesLatLong';
 
+const appId = '47ae443f230aa695cca70832bae5b260';
 const slice = createSlice({
   name: 'airPollution',
-  inialState: {
+  initialState: {
     list: [],
     loading: false,
     lastFetch: null,
   },
-  reducer: {
+  reducers: {
     dataRequested: (state) => {
       state.loading = true;
     },
@@ -17,6 +19,7 @@ const slice = createSlice({
       state.loading = false;
     },
     dataReceived: (state, action) => {
+      console.log(action.payload);
       state.list = action.payload;
       state.loading = false;
       state.lastFetch = Date.now();
@@ -24,18 +27,21 @@ const slice = createSlice({
   },
 });
 
-export { dataRequested, dataRequestFailed, dataReceived } = slice.actions
+export const { dataRequested, dataRequestFailed, dataReceived } = slice.actions;
 
 export default slice.reducer;
 
-export const getData = () => async (dispatch, getState) => {
-  const { lastFetch } = getState().missions;
+export const getData = () => async (dispatch) => {
+  // const { lastFetch } = getState().missions;
+  // console.log('dispatch');
 
-  const diffInMinutes = moment().diff(moment(lastFetch), 'minutes');
-  if (diffInMinutes < 10) return;
+  // const diffInMinutes = moment().diff(moment(lastFetch), 'minutes');
+  // if (diffInMinutes < 10) return;
+  const countries = countryList.filter((country) => country.continent === 'Europe');
   dispatch(
     apiCallBegan({
-      url,
+      countries,
+      appId,
       onStart: dataRequested.type,
       onSuccess: dataReceived.type,
       onError: dataRequestFailed.type,

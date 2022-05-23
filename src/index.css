@@ -2,6 +2,7 @@
 
 :root {
   --clr-white: #ffffff;
+  --clr-dark: #171616;
   --clr-dark-blue: #4369b2;
   --clr-light-blue: #5789e6;
 
@@ -59,7 +60,7 @@ body {
   font-weight: 450;
   font-size: 1.125rem;
   line-height: 1.375rem;
-  color: var(--clr-white);
+  color: var(--clr-dark);
   scroll-behavior: smooth;
 }
 
