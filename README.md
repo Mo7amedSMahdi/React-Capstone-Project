@@ -17,12 +17,12 @@ Here is a description of Air Quality index levels:
 
 | Qualitative name | Index | Pollutant concentration in μg/m3 |
 | :--------------: | :---: | :------------------------------: |
-|                  |       |   NO2 PM10 O3 PM25 (optional)    |
-|       Good       |   1   |       0-50 0-25 0-60 0-15        |
-|       Fair       |   2   |    50-100 25-50 60-120 15-30     |
-|     Moderate     |   3   |   100-200 50-90 120-180 30-55    |
-|       Poor       |   4   |  200-400 90-180 180-240 55-110   |
-|    Very Poor     |   5   |       >400 >180 >240 >110        |
+|                  |       |   NO2     PM10    O3        PM25 (optional)    |
+|       Good       |   1   |   0-50    0-25    0-60      0-15        |
+|       Fair       |   2   |   50-100  25-50   60-120    15-30     |
+|     Moderate     |   3   |   100-200 50-90   120-180   30-55    |
+|       Poor       |   4   |   200-400 90-180  180-240   55-110   |
+|    Very Poor     |   5   |   >400    >180    >240      >110        |
 
 ## Screen Shots
 
