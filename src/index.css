@@ -186,9 +186,11 @@ main {
   filter: contrast(20);
   z-index: 999;
 }
+
 .gooey-container {
   position: absolute;
 }
+
 .gooey .dot {
   position: absolute;
   width: 16px;
@@ -266,4 +268,9 @@ main {
   50% {
     transform: translateX(-31px);
   }
+}
+
+[class^='ri-'],
+[class*=' ri-'] {
+  font-size: 1.3rem;
 }
