@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { getData } from '../../store/pollution';
 import './details.css';
-// import euMap from '../../assets/images/eu-map.svg';
 
 const Details = () => {
   const pollution = useSelector((state) => state.pollution);
   const location = useLocation();
   const dispatch = useDispatch();
-  const tmp = location.pathname.slice(location.pathname.lastIndexOf('/') + 1, location.pathname.length);
-  const country = pollution.list.find((country) => country.country === tmp);
+  const { countryName } = useParams();
+  const country = pollution.list.find((country) => country.country === countryName);
   useEffect(() => {
     if (pollution.list.length <= 0) dispatch(getData());
   }, [location]);

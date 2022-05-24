@@ -15,7 +15,7 @@
 
 .header-intro img {
   max-width: 50%;
-  filter: drop-shadow(1px 4px 6px black);
+  filter: invert(26%) sepia(8%) saturate(4038%) hue-rotate(181deg) brightness(91%) contrast(90%);
 }
 
 .intro-title {
@@ -24,10 +24,14 @@
 
 .header-search {
   width: 100%;
+  padding: 0.5rem;
 }
 
 .header-search input {
+  padding: 0.5rem;
   width: 100%;
+  border: 0;
+  border-radius: 0.2rem;
 }
 
 .countries {
@@ -48,18 +52,21 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/images/country-bg-light.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem;
   min-height: 100%;
 }
 
-.country-card:nth-child(4n + 1) {
+.countries-cards a {
+  background-image: url(../../assets/images/country-bg-light.png);
+}
+
+.countries-cards a:nth-child(4n + 1) {
   background-image: url(../../assets/images/country-bg-dark.png);
 }
 
-.country-card:nth-child(4n) {
+.countries-cards a:nth-child(4n) {
   background-image: url(../../assets/images/country-bg-dark.png);
 }
 
@@ -74,7 +81,7 @@
 
 .country-card img {
   max-width: 85%;
-  filter: drop-shadow(1px 4px 6px black);
+  filter: invert(26%) sepia(8%) saturate(4038%) hue-rotate(181deg) brightness(91%) contrast(90%);
 }
 
 .country-card p {
