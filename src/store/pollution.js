@@ -19,19 +19,26 @@ const slice = createSlice({
       state.loading = false;
     },
     dataReceived: (state, action) => {
-      state.list = action.payload;
+      state.list = action.payload.map((data, index) => {
+        if (data.coord.lat === countries[index].latitude) {
+          return { ...data, country: countries[index].country };
+        }
+      });
       state.loading = false;
       state.lastFetch = Date.now();
+    },
+    getCountry: (state, action) => {
+      state.list.filter((p) => p.country === action.payload);
     },
   },
 });
 
-export const { dataRequested, dataRequestFailed, dataReceived } = slice.actions;
+export const { dataRequested, dataRequestFailed, dataReceived, getCountry } = slice.actions;
 
 export default slice.reducer;
 
 export const getData = () => async (dispatch, getState) => {
-  const { lastFetch } = getState().app;
+  const { lastFetch } = getState().pollution;
 
   const diffInMinutes = moment().diff(moment(lastFetch), 'minutes');
   if (diffInMinutes < 10) return;

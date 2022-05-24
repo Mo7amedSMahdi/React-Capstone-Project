@@ -2,10 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import logger from 'redux-logger';
 import api from './middleware/api';
-import appInfo from './app';
+import pollution from './pollution';
 
 const rootReducer = combineReducers({
-  app: appInfo,
+  pollution,
 });
 
 const store = configureStore({
