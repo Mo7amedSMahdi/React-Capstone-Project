@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import moment from 'moment';
 import { apiCallBegan } from './api';
-import countryList from '../data/coutriesLatLong';
+import countries from '../data/coutriesLatLong';
 
 const appId = '47ae443f230aa695cca70832bae5b260';
 const slice = createSlice({
@@ -36,7 +36,6 @@ export const getData = () => async (dispatch, getState) => {
   const diffInMinutes = moment().diff(moment(lastFetch), 'minutes');
   if (diffInMinutes < 10) return;
 
-  const countries = countryList.filter((country) => country.continent === 'Europe');
   dispatch(
     apiCallBegan({
       countries,
