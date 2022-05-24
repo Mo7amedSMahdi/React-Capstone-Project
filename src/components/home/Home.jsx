@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { getData } from '../../store/pollution';
 import euMap from '../../assets/images/eu-map.svg';
 import './home.css';
@@ -8,10 +8,23 @@ import CountryCard from '../general/CountryCard';
 
 const Home = () => {
   const data = useSelector((state) => state.pollution);
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const search = query.get('search') || '';
+  const [searchQuery, setSearchQuery] = useState(search);
+  let country = [];
+  country = data.list.filter((country) => country.country.toLowerCase().includes(search.toLowerCase()));
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getData());
   }, [data.list]);
+
+  const onSearchQueryChange = (event) => {
+    navigate(event.target.value ? `?search=${event.target.value}` : '');
+    setSearchQuery(event.target.value);
+  };
   return (
     <section className="main-section">
       {data.loading && (
@@ -36,16 +49,17 @@ const Home = () => {
         </div>
       </div>
       <div className="countries">
-        <div className="countries-title">
-          <p>Select country to show Air quality</p>
+        <div className="header-search">
+          <input type="search" className="input-search" placeholder="Search by country name" value={searchQuery} onChange={onSearchQueryChange} />
         </div>
         <div className="countries-cards grid">
           {(data.loading && <p>Loading</p>) ||
-            data.list.map((data) => (
-              <Link key={data.id} to={{ pathname: `/country/${data.country}` }}>
-                <CountryCard map={euMap} country={data} />
-              </Link>
-            ))}
+            (country.length > 0 &&
+              country.map((data) => (
+                <Link key={data.id} to={{ pathname: `/country/${data.country}` }}>
+                  <CountryCard map={data.map} country={data} />
+                </Link>
+              ))) || <p>No Match</p>}
         </div>
       </div>
     </section>

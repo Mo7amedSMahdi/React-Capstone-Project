@@ -21,7 +21,7 @@ const slice = createSlice({
     dataReceived: (state, action) => {
       state.list = action.payload.map((data, index) => {
         if (data.coord.lat === countries[index].latitude) {
-          return { ...data, country: countries[index].country };
+          return { ...data, country: countries[index].country, map: countries[index].map };
         }
       });
       state.loading = false;
