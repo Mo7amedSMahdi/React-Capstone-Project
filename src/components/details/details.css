@@ -1,0 +1,52 @@
+.main-header {
+  --gap: 1.3rem;
+
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header-intro {
+  --gap: 1.3rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.header-intro img {
+  max-width: 50%;
+}
+
+.intro-title {
+  --gap: 0.5rem;
+}
+
+.detials {
+  background: var(--clr-blue);
+  --gap: 0;
+}
+
+.detials-title {
+  background-color: var(--clr-dark-blue);
+  padding: 1rem;
+}
+
+.parameters-list {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.list-parameter {
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.list-parameter:nth-child(odd) {
+  background-color: var(--clr-light-blue);
+}
+
+sup {
+  vertical-align: sub;
+  font-size: small;
+}
