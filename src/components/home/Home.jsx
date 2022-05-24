@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getData } from '../../store/app';
+import { getData } from '../../store/pollution';
 import euMap from '../../assets/images/eu-map.svg';
 import './home.css';
 import CountryCard from '../general/CountryCard';
 
 const Home = () => {
-  const data = useSelector((state) => state.app);
+  const data = useSelector((state) => state.pollution);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
@@ -42,7 +42,7 @@ const Home = () => {
         <div className="countries-cards grid">
           {(data.loading && <p>Loading</p>) ||
             data.list.map((data) => (
-              <Link key={data.id} to={{ pathname: `/country/${data.id}` }}>
+              <Link key={data.id} to={{ pathname: `/country/${data.country}` }}>
                 <CountryCard map={euMap} country={data} />
               </Link>
             ))}
