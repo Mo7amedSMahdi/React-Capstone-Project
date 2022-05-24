@@ -43,7 +43,7 @@ const Home = () => {
           {(data.loading && <p>Loading</p>) ||
             data.list.map((data) => (
               <Link key={data.id} to={{ pathname: `/country/${data.country}` }}>
-                <CountryCard map={euMap} country={data} />
+                <CountryCard map={data.map} country={data} />
               </Link>
             ))}
         </div>

@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  min-height: 45vh;
 }
 
 .header-intro {
@@ -15,6 +16,7 @@
 
 .header-intro img {
   max-width: 50%;
+  filter: drop-shadow(1px 4px 6px black);
 }
 
 .intro-title {

@@ -15,6 +15,7 @@
 
 .header-intro img {
   max-width: 50%;
+  filter: drop-shadow(1px 4px 6px black);
 }
 
 .intro-title {
@@ -51,6 +52,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1rem;
+  min-height: 100%;
 }
 
 .country-card:nth-child(4n + 1) {
@@ -71,7 +73,8 @@
 }
 
 .country-card img {
-  max-width: 50%;
+  max-width: 85%;
+  filter: drop-shadow(1px 4px 6px black);
 }
 
 .country-card p {

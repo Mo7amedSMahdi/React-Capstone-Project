@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { getData } from '../../store/pollution';
 import './details.css';
-import euMap from '../../assets/images/eu-map.svg';
+// import euMap from '../../assets/images/eu-map.svg';
 
 const Details = () => {
   const pollution = useSelector((state) => state.pollution);
@@ -32,7 +32,7 @@ const Details = () => {
         <>
           <div className="main-header flex flex--column">
             <div className="header-intro flex">
-              <img src={euMap} alt="Europe map mask" />
+              <img src={country.map} alt="Europe map mask" />
               <div className="intro-title flex flex--column">
                 <h2>{country.country}</h2>
               </div>
