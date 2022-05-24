@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { getData } from '../../store/app';
 import euMap from '../../assets/images/eu-map.svg';
 import './home.css';
-import Card from '../general/Card';
+import CountryCard from '../general/CountryCard';
 
 const Home = () => {
   const data = useSelector((state) => state.app);
@@ -14,6 +14,18 @@ const Home = () => {
   }, [data.list]);
   return (
     <section className="main-section">
+      {data.loading && (
+        <div className="gooey">
+          <div className="gooey-container">
+            <span className="dot" />
+            <div className="dots">
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+        </div>
+      )}
       <div className="main-header flex flex--column">
         <div className="header-intro flex">
           <img src={euMap} alt="Europe map mask" />
@@ -31,7 +43,7 @@ const Home = () => {
           {(data.loading && <p>Loading</p>) ||
             data.list.map((data) => (
               <Link key={data.id} to={{ pathname: `/country/${data.id}` }}>
-                <Card map={euMap} />
+                <CountryCard map={euMap} country={data} />
               </Link>
             ))}
         </div>

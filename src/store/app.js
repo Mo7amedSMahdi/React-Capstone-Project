@@ -19,7 +19,11 @@ const slice = createSlice({
       state.loading = false;
     },
     dataReceived: (state, action) => {
-      state.list = action.payload;
+      state.list = action.payload.map((data, index) => {
+        if (data.coord.lat === countries[index].latitude) {
+          return { ...data, country: countries[index].country };
+        }
+      });
       state.loading = false;
       state.lastFetch = Date.now();
     },
