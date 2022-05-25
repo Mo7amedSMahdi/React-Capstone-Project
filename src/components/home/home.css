@@ -84,9 +84,24 @@
   filter: invert(26%) sepia(8%) saturate(4038%) hue-rotate(181deg) brightness(91%) contrast(90%);
 }
 
+.card-name {
+  --gap: 0.4rem;
+
+  width: 100%;
+}
+
+.card-name h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: right;
+}
+
 .country-card p {
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.8rem;
   width: 100%;
+  font-weight: 300;
   text-align: right;
 }
