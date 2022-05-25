@@ -30,7 +30,7 @@ Air pollution forecast is available for 5 days with hourly granularity. Historic
 
 ## Live Demo
 
-- [live](https://mo7amedsmahdi.github.io/React-Capston-Project/)
+- [live](https://boisterous-dragon-1147f3.netlify.app/)
 
 ## Getting Started
 
