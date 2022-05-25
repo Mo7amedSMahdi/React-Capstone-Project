@@ -8,9 +8,17 @@ Besides basic Air Quality Index, the API returns data about polluting gases, suc
 
 Air pollution forecast is available for 5 days with hourly granularity. Historical data is accessible from 27th November 2020.
 
-## Screen Shots
+<h2 align="center">
+  Screen Shots 📝
+</h2>
 
-> Coming Soon.
+|                                                        **Interface 1**                                                        |
+| :---------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/Mo7amedSMahdi/React-Capstone-Project/development/src/assets/images/screen1.png" > |
+
+|                                                        **Interface 2**                                                        |
+| :---------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/Mo7amedSMahdi/React-Capstone-Project/development/src/assets/images/screen2.png" > |
 
 ## Built With &hearts;
 
