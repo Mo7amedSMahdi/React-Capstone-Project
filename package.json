@@ -2,7 +2,7 @@
   "name": "react-capstone-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mo7amedsmahdi.me/react-capstone-project",
+  "homepage": "http://mo7amedsmahdi.me/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
