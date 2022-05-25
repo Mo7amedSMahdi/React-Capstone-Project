@@ -16,11 +16,13 @@ CountryCard.propTypes = {
   map: PropTypes.string.isRequired,
   country: PropTypes.shape({
     country: PropTypes.string.isRequired,
-    list: PropTypes.shape({
-      main: PropTypes.shape({
-        aqi: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        main: PropTypes.shape({
+          aqi: PropTypes.string.isRequired,
+        }),
       }),
-    }),
+    ),
   }).isRequired,
 };
 

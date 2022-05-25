@@ -21,6 +21,25 @@ const slice = createSlice({
     dataReceived: (state, action) => {
       state.list = action.payload.map((data, index) => {
         if (data.coord.lat === countries[index].latitude) {
+          switch (data.list[0].main.aqi) {
+            case 1:
+              data.list[0].main.aqi = 'Good';
+              break;
+            case 2:
+              data.list[0].main.aqi = 'Fair';
+              break;
+            case 3:
+              data.list[0].main.aqi = 'Moderate';
+              break;
+            case 4:
+              data.list[0].main.aqi = 'Poor';
+              break;
+            case 5:
+              data.list[0].main.aqi = 'Very Poor';
+              break;
+            default:
+              break;
+          }
           return { ...data, country: countries[index].country, map: countries[index].map };
         }
       });

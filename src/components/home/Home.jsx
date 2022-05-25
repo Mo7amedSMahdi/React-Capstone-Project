@@ -59,7 +59,7 @@ const Home = () => {
                 <Link key={data.id} to={{ pathname: `/country/${data.country}` }}>
                   <CountryCard map={data.map} country={data} />
                 </Link>
-              ))) || <p>No Match</p>}
+              ))) || <p className="no-result">No Match</p>}
         </div>
       </div>
     </section>
