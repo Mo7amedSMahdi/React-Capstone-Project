@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-capstone-project/static/css/main.9d582948.css",
+    "main.js": "/react-capstone-project/static/js/main.ea5f8b33.js",
+    "static/media/remixicon.svg?t=1590207869815": "/react-capstone-project/static/media/remixicon.9cedd2150922ead84869.svg",
+    "static/media/remixicon.eot?t=1590207869815": "/react-capstone-project/static/media/remixicon.5cb99e6cba5a4619063f.eot",
+    "static/media/remixicon.ttf?t=1590207869815": "/react-capstone-project/static/media/remixicon.f2616f597cf98f38d234.ttf",
+    "static/media/remixicon.woff?t=1590207869815": "/react-capstone-project/static/media/remixicon.8d09fa11700ed63cf96e.woff",
+    "static/media/remixicon.woff2?t=1590207869815": "/react-capstone-project/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
+    "static/media/eu-map.svg": "/react-capstone-project/static/media/eu-map.91194f50b0842a053e35cfc616c503ba.svg",
+    "index.html": "/react-capstone-project/index.html",
+    "main.9d582948.css.map": "/react-capstone-project/static/css/main.9d582948.css.map",
+    "main.ea5f8b33.js.map": "/react-capstone-project/static/js/main.ea5f8b33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d582948.css",
+    "static/js/main.ea5f8b33.js"
+  ]
+}
