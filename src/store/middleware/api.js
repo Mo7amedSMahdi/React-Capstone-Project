@@ -2,8 +2,6 @@ import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 import * as actions from '../api';
 
-// const baseURL = 'http://api.openweathermap.org/data/2.5/air_pollution';
-
 const api =
   ({ dispatch }) =>
   (next) =>
