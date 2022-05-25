@@ -46,13 +46,10 @@ const slice = createSlice({
       state.loading = false;
       state.lastFetch = Date.now();
     },
-    getCountry: (state, action) => {
-      state.list.filter((p) => p.country === action.payload);
-    },
   },
 });
 
-export const { dataRequested, dataRequestFailed, dataReceived, getCountry } = slice.actions;
+export const { dataRequested, dataRequestFailed, dataReceived } = slice.actions;
 
 export default slice.reducer;
 
